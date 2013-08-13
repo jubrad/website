@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.0>
+<HTML>
+ <HEAD>
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+ </HEAD>
+  <body>
+    <% if flash[:error] -%>
+        <p class='error'><%=h flash[:error] %></p>
+    <% end -%>
+    <% if flash[:notice] -%>
+        <p class='notice'><%=h flash[:notice] %></p>
+    <% end -%>
+    <div id='header'>
+     <ul id= 'navigation'>
+       <span>
+         LOGO
+       </span>
+       <li>
+         About 
+       </li>
+       <li>
+         Resume
+       </li>
+       <li>
+         Blog
+       </li>
+       <%if current_user%>
+        <%= link_to "log out", 'log_out' %>
+       <%end%>
+      </ul>
+   </div>
+   <div id='content'> 
+     <span id='column1'>
+       Hello,<br/>
+       My name is Justin.  I developer who just graduated from Cornell College with majors in computer science in physcs.  I beleive what drives me the most is ......  
+     </span>
+     <span id='column2'>
+        <%= yield %>
+     </span>
+   </div>
+   <div id='footer'>
+     <ul id='footList'>
+       <li>
+         Facebook link/media links
+       </li>
+       <li>
+         contact
+       </li>
+       <li>
+        <%= link_to 'admin', new_session_path %>
+       </li>
+      </ul>
+    </div>
+ </body>
+</HTML>

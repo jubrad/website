@@ -1,0 +1,10 @@
+<p> ADMIN LOGIN</p>
+<%= render 'shared/flash_messages' if !flash.empty? %>
+<%= form_tag sessions_path do |f|%>
+	<%= text_field_tag :user_name, params[:user_name]%>
+	<%=password_field_tag :password%>
+	<%=submit_tag%>
+<%end%>
+
+
+

@@ -1,0 +1,10 @@
+<% last = @posts.last %>
+<% if last %>
+<h3> <%= last.title%></h3>
+<%= image_tag last.photo(:normal), :class => 'post_image' %>
+<div class ='post_description'>
+	<%= last.text %>
+<% else %>
+ <%= link_to 'new post', new_post_path%>
+<%end%>
+</div>
