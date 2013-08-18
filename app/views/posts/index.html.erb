@@ -1,10 +1,23 @@
-<% last = @posts.last %>
-<% if last %>
-<h3> <%= last.title%></h3>
-<%= image_tag last.photo(:normal), :class => 'post_image' %>
-<div class ='post_description'>
-	<%= last.text %>
-<% else %>
- <%= link_to 'new post', new_post_path%>
+<% content_for :sidebar do%>
+	<p> A picture of me should go here.  Not extremely professional though</p>
+	<h3> Hello </h3>
+	<p>
+		My name is Justin.  I'm a recent conllege graduate who really likes dogs and burritos.  
+	</p>
+
 <%end%>
-</div>
+
+
+<% content_for :main do%>
+	<% last = @posts.last %>
+	<h2> my recent activity </h2>
+	<% if last %>
+	<h3> <%= last.title%></h3>
+	<%= image_tag last.photo(:normal), :class => 'post_image' %>
+	<div class ='post_description'>
+		<%= last.text %>
+	<% else %>
+	 <%= link_to 'new post', new_post_path%>
+	<%end%>
+	</div>
+<%end%>

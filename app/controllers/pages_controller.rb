@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def blog
+  	@posts=Post.all
   end
 
   def contact
