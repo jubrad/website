@@ -1,0 +1,10 @@
+
+<% if @post %>
+	<p></p>
+	<h1 class='smaller-h1  create-space'> <%= @post.title%></h1>
+	<%= image_tag @post.photo(:normal), :class => "img-rounded" %>
+	<p class='pagination-centered'>
+		<%= @post.text %>
+	</p>
+	<%= render 'comment_list',:post => @post%>
+<%end%>

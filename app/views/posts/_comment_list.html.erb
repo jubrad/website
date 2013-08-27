@@ -1,0 +1,16 @@
+<div class='comments align-left create-space'>
+	<h3>Comments</h3>
+
+	<% if @post.comments%>
+		<% @post.comments.each do |comment|%>
+			<%=render '/comments/show_comment', :comment => comment%>
+			
+		<%end%>
+	<%else%>
+			Be the first to comment
+	<%end%>
+	</div>
+	<div class='span 8 centered'>
+		<%=render '/comments/comment_form', :post => @post%>
+	</div>
+		

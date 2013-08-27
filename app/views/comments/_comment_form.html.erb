@@ -1,0 +1,22 @@
+<%= form_for([@post,@comment],remote:true) do |f|%>
+<div class='span6 align-left'>
+	<p>
+		Name*
+	</p>
+	<p>
+		<%=f.text_field :name, :class=>'form-control fixed-width-field'%>
+	<%#=text_field_tag :email, 'email address'%>
+		<%=f.hidden_field :post_id, :value=>@post.id%>
+	</p>
+	<p>
+		Comment*
+	</p>
+	<p>
+
+		<%=f.text_area :message,:rows=>'3', :class=>'form-control fixed-width-field'%>
+	</p>
+	<p>
+	<%=submit_tag 'submit', :class => 'btn btn-primary btn-large'%>
+	</p>
+</div>
+<%end%>

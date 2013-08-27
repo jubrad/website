@@ -6,7 +6,9 @@ class SessionsController < ApplicationController
   	user=User.authenticate(params[:user_name],params[:password])
   	if user
   		session[:user_id]=user.id
-  		redirect_to root_url, :notice => "logged in"
+      #Change this to a user show path, which has forms
+      # to create posts or manage the blog
+  		redirect_to users_index_path, :notice => "logged in"
     else 
     	flash.now.alert='invalid information'
     	render 'new'

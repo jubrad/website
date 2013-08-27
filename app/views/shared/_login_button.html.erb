@@ -1,0 +1,6 @@
+<% if current_user %>
+	<li><%= link_to "logout",session_path(current_user), :method => 'delete' %> </li>
+<%else%>
+	<li><%= link_to "Admin",new_session_path %> </li>
+<%end%>
+

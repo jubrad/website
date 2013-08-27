@@ -1,10 +1,16 @@
-<p> ADMIN LOGIN</p>
-<%= render 'shared/flash_messages' if !flash.empty? %>
-<%= form_tag sessions_path do |f|%>
-	<%= text_field_tag :user_name, params[:user_name]%>
-	<%=password_field_tag :password%>
-	<%=submit_tag%>
+<% content_for :sidebar do %>
+	<h1> Admin </h1>
+	<p> this is page is for admin loggin.  It gives me access to add posts and remove comments </p>
 <%end%>
 
+<% content_for :main do %>
+	<h1> ADMIN LOGIN </h1>
+	<%= render 'shared/flash_messages' if !flash.empty? %>
+	<%= form_tag sessions_path do |f|%>
+		<%= text_field_tag :user_name, params[:user_name]%>
+		<%=password_field_tag :password%>
+		<%=submit_tag 'login', :class => 'btn'%>
+	<%end%>
+<%end %>
 
 

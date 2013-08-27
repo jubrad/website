@@ -1,2 +1,15 @@
-<h1>Pages#blog</h1>
-<p>Find me in app/views/pages/blog.html.erb</p>
+<% content_for :sidebar do%>
+
+	<p> A picture of me should go here.  Not extremely professional though</p>
+	
+	<h3> Hello </h3>
+
+	<p>
+		My name is Justin.  This is my new website.  On the right you will find a highlighted post, most likely about tehnology, coding, music, or food.  Feel free to explore the website. Thanks for visiting.  
+	</p>
+
+<%end%>
+
+<% content_for :main do%>
+	<%=render '/posts/post_box', :post => @posts.first %>
+<%end%>
