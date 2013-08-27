@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   end
 
   def new
+    @post=Post.find paras[:id]
     @comment=Comment.new
     session[:return_to] || request.referer
   end

@@ -5,8 +5,8 @@ class PagesController < ApplicationController
   def resume
   end
 
-  def blog
-  	@posts=Post.all
+  def index
+
   end
 
   def contact
