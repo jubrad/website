@@ -1,4 +1,4 @@
-<%= form_for([@post,@comment],remote:true) do |f|%>
+<%= form_for([post,post.comments.new],remote:true) do |f|%>
 <div class='span6 align-left'>
 	<p>
 		Name*

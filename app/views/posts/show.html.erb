@@ -1,8 +1,19 @@
-<% content_for :sidebar do%>
 
+<% content_for :sidebar do%>
+	<h3> Post list </h3>
+	<ul id='post-list'>
+		<%all_posts.each do |post|%>
+			<li>
+				<%= link_to post.title,post%>
+			</li>
+		<%end%>
+	</ul>
 <%end%>
 
+
 <% content_for :main do%>
-	<h1> <%=@post.id%> </h1>
+<div class='hero-unit pagination-centered'>
+	<small> <%=@post.created_at.strftime('%F')%> </small>
 	<%=render 'post_box'%>
+</div>
 <%end%>

@@ -3,7 +3,7 @@
 	<ul id='post-list'>
 		<%all_posts.each do |post|%>
 			<li>
-				<%= link_to post.id,post%>
+				<%= link_to post.title,post%>
 			</li>
 		<%end%>
 	</ul>
@@ -13,5 +13,6 @@
 <% content_for :main do%>
 <div class='hero-unit pagination-centered'>
 		<h2 class='align-left'> Highlighted </h2>
-		<%=render 'post_box', :post => @post %>
+		<%=render 'post_box' %>
+</div>
 <%end%>
