@@ -1,0 +1,26 @@
+<%= form_for :message, :remote=>true,  :html => { :id => 'message_form' } do |f|%>
+<div class='span6 align-left'>
+	<p>
+		Name*
+	</p>
+	<p>
+		<%=f.text_field :name, :class=>'form-control fixed-width-field'%>
+	</p>
+	<p>
+		Email Address*
+	</p>
+	<p>
+		<%=f.text_field :address, :class=>'form-control fixed-width-field'%>
+	</p>
+	<p>
+		Comment*
+	</p>
+	<p>
+
+		<%=f.text_area :message,:rows=>'3', :class=>'form-control fixed-width-field'%>
+	</p>
+	<p>
+	<%=submit_tag 'submit', :class => 'btn btn-primary btn-large' , :id=> 'submit_message'%>
+	</p>
+</div>
+<%end%>

@@ -1,2 +1,26 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<%content_for :sidebar do%>
+	<h3> Visit</h3>
+	 my profiles on any of the following links, or send me a message </br>
+	<!-- REPLACE LINKS WITH IMAGES-->	
+	<ul id='nav-list'>
+		<li>
+			<%=link_to 'linkedin','http://www.linkedin.com/in/justinbradfield' %>
+		</li>
+		<li>
+			<%=link_to 'github','http://www.linkedin.com/in/justinbradfield' %>
+		</li>
+		<li>
+			<%=link_to 'facebook','http://www.facebook.com/justin.bradfield2' %>
+		</li>
+	</ul>
+<%end%>
+
+<%content_for :main do%>
+<div class='hero-unit'>
+	<h2>Send me a message</h2>
+	<%=render 'message_form' %>
+</div>
+
+
+
+<%end%>

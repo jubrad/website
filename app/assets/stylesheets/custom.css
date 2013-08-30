@@ -1,9 +1,31 @@
-#post-list{
+#nav-list{
 	list-style: none;
+	margin-left: 0;
+	list-style:none;
 }
-#post-list li{
+#nav-list li{
 	display: block;
-	
+	height: 30px;
+	margin-bottom: 10px;
+	margin-top:  10px;
+	color: black;
+	padding: 5px;
+	text-align: center;
+	border-radius: 6px 6px 6px 6px;
+}
+#nav-list li a{
+	color: black;
+	text-decoration: none;
+	font-size: medium;
+}
+#nav-list li:hover{
+	background-color: #eeeeee;
+}
+
+
+
+.contact_list{
+	list-style: none;
 }
 
 #footer{
