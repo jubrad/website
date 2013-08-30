@@ -1,6 +1,10 @@
 #post-list{
 	list-style: none;
 }
+#post-list li{
+	display: block;
+	
+}
 
 #footer{
 	margin: 20px;

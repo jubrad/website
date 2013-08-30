@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
   def all_posts
-  		@posts=Post.all
+  		@posts=Post.all.find(:all, :order => "created_at DESC")
   end
    helper_method :all_posts
 

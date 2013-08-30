@@ -1,12 +1,5 @@
 <% content_for :sidebar do%>
-	<h3> Post list </h3>
-	<ul id='post-list'>
-		<%all_posts.each do |post|%>
-			<li>
-				<%= link_to post.title,post%>
-			</li>
-		<%end%>
-	</ul>
+	<%= render 'post_list'%>
 <%end%>
 
 

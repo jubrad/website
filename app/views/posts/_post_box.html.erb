@@ -1,8 +1,9 @@
 
 <% if @post %>
 	<p></p>
+
 	<h1 class='smaller-h1  create-space'> <%= @post.title%></h1>
-	<%= image_tag @post.photo(:normal), :class => "img-rounded" %>
+	<%= image_tag @post.photo(:normal), :class => "img-rounded create-space" %>
 	<p class='pagination-centered'>
 		<%= @post.text %>
 	</p>
